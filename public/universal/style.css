@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+* {
+    font-family: "Parkinsans", sans-serif;
+}
+body {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+:root {
+    --a: #28443f;
+    --aa: #152421;
+    --b: #f2fd7d;
+    --c: #eef4ed;
+    --d: #9c9c9c;
+    --e: #3d9182;
+    --f: #f5deb3;
+    --g: #dadada;
+    --black: #021021;
+}

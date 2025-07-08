@@ -1,0 +1,65 @@
+.toast {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 10px;
+    width: 100vw;
+    max-width: 320px;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    span {
+        cursor: pointer;
+    }
+    .content{
+        ul{
+            list-style: none;
+            li{
+                border-bottom: 1px solid rgba(255, 255, 255, 0.307);
+            }
+        }
+    }
+}
+
+.toast.success {
+    background: linear-gradient(to bottom, var(--a), var(--aa));
+}
+.toast.danger {
+    background: linear-gradient(to bottom, rgb(182, 0, 0), rgb(68, 0, 0));
+}
+
+.toast.animate {
+    animation: animate 6s forwards;
+}
+
+@keyframes animate {
+    0% {
+        top: -50%;
+    }
+    10% {
+        top: 10px;
+    }
+    90% {
+        top: 10px;
+    }
+    100% {
+        top: -50%;
+    }
+}
+
+.toast.hide {
+    animation: hide 1s forwards;
+}
+
+@keyframes hide {
+    0% {
+        top: 10px;
+    }
+    100% {
+        top: -50%;
+    }
+}

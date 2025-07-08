@@ -1,0 +1,261 @@
+/* Google Fonts Link */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+nav {
+    position: fixed;
+    z-index: 100;
+    /* background: var(--a); */
+    background: linear-gradient(to bottom, var(--a), var(--aa));
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    justify-content: space-between;
+}
+label.logo {
+    color: var(--c);
+    font-size: 25px;
+    /* line-height: 80px; */
+    padding: 0 0 0 50px;
+    font-weight: bold;
+}
+nav ul {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a,
+nav ul li i {
+    color: var(--d);
+    font-size: 15px;
+    padding: 8px 6px;
+    border-radius: 100px;
+
+        span {
+            width: 40px;
+            aspect-ratio: 1;
+            border-radius: 100px;
+            background: var(--a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--e);
+            font-size: 20px;
+            border: 1px solid var(--e);
+        }
+    
+}
+
+a.active,
+a:hover,
+i:hover {
+    color: var(--c);
+}
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    /* float: right; */
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media (max-width: 1050px) {
+    label.logo {
+        padding-left: 30px;
+    }
+}
+/* Responsive media query code for small screen */
+@media (max-width: 890px) {
+    nav {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .checkbtn {
+        display: block;
+    }
+    label.logo {
+        font-size: 22px;
+    }
+    ul {
+        display: block !important;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--a);
+        top: 40px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+    }
+    a.active {
+        color: var(--c);
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/* section {
+  background: url("bg.jpg") no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+} */
+
+.material {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+footer {
+    width: 100%;
+    background: var(--a);
+    color: var(--c);
+    padding: 100px 0px 0px 0px;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+}
+.main-content {
+    padding: 0px 20px;
+    display: flex;
+}
+.main-content .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.box .content:before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+.box .content:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 15%;
+    background: var(--b);
+    top: -10px;
+}
+.left .content p {
+    text-align: justify;
+}
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+.left .content .social a {
+    padding: 0 2px;
+}
+.left .content .social a span {
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.center .content .fas {
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.center .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+
+    a {
+        all: unset;
+        cursor: pointer;
+    }
+}
+.center .content .phone {
+    margin: 15px 0;
+}
+.right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+}
+.bottom center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+.bottom center span {
+    color: #656565;
+}
+.bottom center a {
+    color: var(--a);
+    text-decoration: none;
+}
+.bottom center a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box {
+        margin: 5px 0;
+    }
+}
